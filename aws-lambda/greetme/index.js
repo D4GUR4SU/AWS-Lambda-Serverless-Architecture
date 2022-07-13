@@ -13,7 +13,7 @@ const greeting = {
 exports.handler = async (event) => {
 
     let name = event.pathParameters.name;
-    let { lang, ...info } = event.queryStringParameters;
+    let { lang, ...info } = event.queryStringParameters || {};
 
     let message = `${greeting[lang] ? greeting[lang] : greeting['en']} ${name}`;
     let response = {
@@ -24,6 +24,9 @@ exports.handler = async (event) => {
 
     return {
         statusCode: 200,
+        Headers: {
+            "Access-Control-Allow-Origin": "*"
+        },
         body: JSON.stringify(response)
     }
 }
