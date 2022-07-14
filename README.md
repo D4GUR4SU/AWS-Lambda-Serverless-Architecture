@@ -4,12 +4,6 @@
     <img src="assets/logo.png">
 </p>
 
-<p align="center">
-    <img src="https://img.shields.io/badge/Node-v16.13.2-red">
-    <img src="https://img.shields.io/badge/JavaScript-ES6-green">
-    <img src="https://img.shields.io/badge/AWS Lambda-yellow">
-</p>
-
 ---
 
 # 💻 About the project
