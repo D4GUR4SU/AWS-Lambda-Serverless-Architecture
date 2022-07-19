@@ -1,0 +1,5 @@
+aws lambda add-permission --function-name "arn:aws:lambda:us-east-1:218054971058:function:eventLogger:test" --source-arn "arn:aws:execute-api:us-east-1:218054971058:sy1q93dex9/*/GET/" --principal apigateway.amazonaws.com   --statement-id f3d07fc0-3d93-422f-927f-2dc8e9372b89 --action lambda:InvokeFunction
+
+aws lambda add-permission --function-name "arn:aws:lambda:us-east-1:218054971058:function:eventLogger:prod" --source-arn "arn:aws:execute-api:us-east-1:218054971058:sy1q93dex9/*/GET/" --principal apigateway.amazonaws.com --statement-id f3d07fc0-3d93-422f-927f-2dc8e9372b89 --action lambda:InvokeFunction
+
+aws lambda add-permission --function-name "arn:aws:lambda:us-east-1:218054971058:function:eventLogger:dev" --source-arn "arn:aws:execute-api:us-east-1:218054971058:sy1q93dex9/*/GET/" --principal apigateway.amazonaws.com   --statement-id f3d07fc0-3d93-422f-927f-2dc8e9372b89 --action lambda:InvokeFunctio
