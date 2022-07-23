@@ -1,5 +1,8 @@
 service: hello-serverless
 
+plugins:
+  - serverless-offline
+
 provider:
   name: aws
   runtime: nodejs12.x
@@ -13,6 +16,16 @@ functions:
     handler: handler.hello
     memorySize: 128
     timeout: 3
+    vpc:
+      securityGroupIds:
+        - sg-0a2e1f21185c6564e
+      subnetIds:
+        - subnet-082040cc1826f01e7
+        - subnet-0b595dd9440883eff
+        - subnet-0c5b6acbe66eccdc2
+        - subnet-0dc2936d64bbed353
+        - subnet-0af43701ede11b539
+        - subnet-0c53a14c16ca2cf9d
 
   add:
     handler: add.add
