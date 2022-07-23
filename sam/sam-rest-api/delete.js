@@ -14,10 +14,19 @@ exports.handler = async (event) => {
         }
     }).promise();
 
-    return {
-        statusCode: 200,
-        body: JSON.stringify({
-            message: "User delete successfully"
-        })
-    };
+    if (data.Item != null) {
+        return {
+            statusCode: 204,
+            body: JSON.stringify({
+                message: "User deleted successfully"
+            })
+        };
+    } else {
+        return {
+            statusCode: 404,
+            body: JSON.stringify({
+                message: "User not found"
+            })
+        };
+    }
 }

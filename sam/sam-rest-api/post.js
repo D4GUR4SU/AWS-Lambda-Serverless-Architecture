@@ -17,15 +17,17 @@ exports.handler = async (event) => {
         website: website
     }
 
-    let data = await dynamodb.put({
+    let data = await dynamodb.post({
         TableName: tableName,
         Item: item
     }).promise();
 
-    return {
-        statusCode: 200,
-        body: JSON.stringify({
-            mesaage: "Data inserted/updated successfully"
-        })
-    };
+    if (data.Item != null) {
+        return {
+            statusCode: 200,
+            body: JSON.stringify({
+                message: "Data inserted/updated successfully"
+            })
+        };
+    }
 }

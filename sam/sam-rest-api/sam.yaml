@@ -1,16 +1,15 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Transform: AWS::Serverless-2016-10-31
 Description: REST API using SAM
-
 Globals:
   Function:
     Runtime: nodejs16.x
     Environment:
       Variables:
-        TABLE_NAME: !Ref Table
+        TABLE_NAME:
+          Ref: Table
     MemorySize: 128
     Timeout: 5
-
 Resources:
   Table:
     Type: AWS::Serverless::SimpleTable
@@ -21,7 +20,8 @@ Resources:
       ProvisionedThroughput:
         ReadCapacityUnits: 1
         WriteCapacityUnits: 1
-
+    Metadata:
+      SamResourceId: Table
   GetUser:
     Type: AWS::Serverless::Function
     Properties:
@@ -33,8 +33,9 @@ Resources:
           Properties:
             Path: /user/{userid}
             Method: get
-
-
+      CodeUri: s3://douglas-sam/e9f1ce63a23e2b02436e871fc440d919
+    Metadata:
+      SamResourceId: GetUser
   PostUser:
     Type: AWS::Serverless::Function
     Properties:
@@ -46,7 +47,9 @@ Resources:
           Properties:
             Path: /user/{userid}
             Method: post
-
+      CodeUri: s3://douglas-sam/e9f1ce63a23e2b02436e871fc440d919
+    Metadata:
+      SamResourceId: PostUser
   DeleteUser:
     Type: AWS::Serverless::Function
     Properties:
@@ -58,4 +61,6 @@ Resources:
           Properties:
             Path: /user/{userid}
             Method: delete
-
+      CodeUri: s3://douglas-sam/e9f1ce63a23e2b02436e871fc440d919
+    Metadata:
+      SamResourceId: DeleteUser
