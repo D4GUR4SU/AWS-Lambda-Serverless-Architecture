@@ -1,0 +1,9 @@
+{
+    "UserPoolId": "us-east-1_PZzgu9zeQ",
+    "ClientId": "57j0aqr8hrv89f5p3f7ljqloai",
+    "AuthFlow": "ADMIN_NO_SRP_AUTH",
+    "AuthParameters": {
+        "USERNAME": "douglas",
+        "PASSWORD": "password"
+    }
+}
