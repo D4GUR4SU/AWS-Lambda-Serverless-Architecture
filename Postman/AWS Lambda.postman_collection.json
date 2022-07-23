@@ -1,0 +1,318 @@
+{
+	"info": {
+		"_postman_id": "b549b7ce-e650-4c0f-b1cb-789a8f45c86e",
+		"name": "AWS Lambda",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Math Calculator",
+			"item": [
+				{
+					"name": "Math",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "UPvMhKaFcr545D6EHHQ6hIEAVrwYiJgtybY0xB40",
+								"type": "default",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"num1\":13,\n    \"num2\":8\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://sy1q93dex9.execute-api.us-east-1.amazonaws.com/test/math/add",
+							"protocol": "https",
+							"host": [
+								"sy1q93dex9",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"test",
+								"math",
+								"add"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Greeting",
+			"item": [
+				{
+					"name": "Greeting",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "UPvMhKaFcr545D6EHHQ6hIEAVrwYiJgtybY0xB40",
+								"type": "default",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "https://sy1q93dex9.execute-api.us-east-1.amazonaws.com/test/message/Douglas?lang=pt",
+							"protocol": "https",
+							"host": [
+								"sy1q93dex9",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"test",
+								"message",
+								"Douglas"
+							],
+							"query": [
+								{
+									"key": "lang",
+									"value": "pt"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Random Message",
+			"item": [
+				{
+					"name": "Random Message",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "UPvMhKaFcr545D6EHHQ6hIEAVrwYiJgtybY0xB40",
+								"type": "default",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "https://sy1q93dex9.execute-api.us-east-1.amazonaws.com/test/getRandomMessage",
+							"protocol": "https",
+							"host": [
+								"sy1q93dex9",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"test",
+								"getRandomMessage"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Event Logger",
+			"item": [
+				{
+					"name": "eventLogger - test",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "UPvMhKaFcr545D6EHHQ6hIEAVrwYiJgtybY0xB40",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "https://sy1q93dex9.execute-api.us-east-1.amazonaws.com/dev/eventLogger",
+							"protocol": "https",
+							"host": [
+								"sy1q93dex9",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"dev",
+								"eventLogger"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "eventLogger - prod",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-app-key",
+								"value": "UPvMhKaFcr545D6EHHQ6hIEAVrwYiJgtybY0xB40",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "https://sy1q93dex9.execute-api.us-east-1.amazonaws.com/dev/",
+							"protocol": "https",
+							"host": [
+								"sy1q93dex9",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"dev",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "SAM",
+			"item": [
+				{
+					"name": "https://ppn4iryqwd.execute-api.us-east-1.amazonaws.com/Prod/user/%7Buserid%7D",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"firstName\": \"Douglas\",\n    \"lastName\": \"Barbosa\",\n    \"email\": \"test@email.com\",\n    \"website\": \"www.site.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://ppn4iryqwd.execute-api.us-east-1.amazonaws.com/Prod/user/douglas",
+							"protocol": "https",
+							"host": [
+								"ppn4iryqwd",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"Prod",
+								"user",
+								"douglas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://ppn4iryqwd.execute-api.us-east-1.amazonaws.com/Prod/user/douglas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://ppn4iryqwd.execute-api.us-east-1.amazonaws.com/Prod/user/hi",
+							"protocol": "https",
+							"host": [
+								"ppn4iryqwd",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"Prod",
+								"user",
+								"hi"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://ppn4iryqwd.execute-api.us-east-1.amazonaws.com/Prod/user/%7Buserid%7D",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://ppn4iryqwd.execute-api.us-east-1.amazonaws.com/Prod/user/douglas",
+							"protocol": "https",
+							"host": [
+								"ppn4iryqwd",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"Prod",
+								"user",
+								"douglas"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Serverless",
+			"item": [
+				{
+					"name": "https://e9b3a0o51i.execute-api.us-east-1.amazonaws.com/prod/math/add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"num1\": 1,\n    \"num2\": 125\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://e9b3a0o51i.execute-api.us-east-1.amazonaws.com/prod/math/add",
+							"protocol": "https",
+							"host": [
+								"e9b3a0o51i",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"prod",
+								"math",
+								"add"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
